@@ -279,6 +279,8 @@ def generate_response_with_llm_for_multiple_namespaces(index, user_input, namesp
     ----------
     【アウトプット例】
     {example_plot}
+    【その他の過去に作った台本】
+    {results_ns3}
     """)
 
     # LLMにプロンプトを渡して応答を生成
