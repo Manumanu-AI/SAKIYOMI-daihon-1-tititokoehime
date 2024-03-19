@@ -271,7 +271,7 @@ def generate_response_with_llm_for_multiple_namespaces(index, user_input, namesp
     ----------
     また、今回ユーザーが希望する【テーマの関連情報】を使ってください。
     ----------
-    【テーマの関連情報】
+    【テーマの関連情報】 (場所の名前が載っています)
     {results_ns1}
     {results_ns2}
     ----------
@@ -285,7 +285,7 @@ def generate_response_with_llm_for_multiple_namespaces(index, user_input, namesp
     """)
 
     # LLMにプロンプトを渡して応答を生成
-    llm = ChatOpenAI(model='gpt-4-1106-preview', temperature=0.8)
+    llm = ChatOpenAI(model='gpt-4-1106-preview', temperature=0.77)
     llm_chain = LLMChain(prompt=prompt_template, llm=llm)
 
     # st.secretsを使ってプロジェクト名を取得
