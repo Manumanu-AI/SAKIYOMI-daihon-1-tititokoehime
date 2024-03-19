@@ -250,7 +250,7 @@ def generate_response_with_llm_for_multiple_namespaces(index, user_input, namesp
 
     # プロンプトテンプレートの準備
     prompt_template = PromptTemplate.from_template("""
-    あなたはInstagramフィードの台本専門の作家です。
+    あなたはInstagramリールの台本専門の作家です。
     ユーザーメッセージのメッセージに従い、Instagramのフィード台本を生成してください。
     ----------
     【ユーザーのメッセージ】
