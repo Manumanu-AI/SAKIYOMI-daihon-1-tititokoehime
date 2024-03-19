@@ -259,10 +259,10 @@ def generate_response_with_llm_for_multiple_namespaces(index, user_input, namesp
     ----------
     【台本作成時のポイント】
     ・【過去Instagramで投稿された台本】の"1枚目-表紙 (タイトル)"キーを参照して、適切なタイトルをつけなさい。
-    ・1枚目(表紙)は「フック」と「ベース」で構成されています。「フック」と「ベース」の文字数の合計が24文字以内になるようにしてください。
     ・生成する台本のフォーマットは【アウトプット例】と同じにして生成してください。
     ・また、【アウトプット例】は過去に私が作ったものなので、そちらを再現するように口調、文章量、表現を真似て下さい。
-    ・自分が行ったかのような表現で書くこと。
+    ・自分が行って、おすすめしている表現で書くこと。
+    ・一般的な情報を載せるだけではつまらないので、主観的に言い切ったり、紹介する要素を限定して尖らせて下さい。その方が人間らしく、面白いリールになります。
 
     ----------
     その際、「過去Instagramで投稿された台本」の情報と口調を参照すること。
@@ -282,7 +282,7 @@ def generate_response_with_llm_for_multiple_namespaces(index, user_input, namesp
     """)
 
     # LLMにプロンプトを渡して応答を生成
-    llm = ChatOpenAI(model='gpt-4-1106-preview', temperature=0.7)
+    llm = ChatOpenAI(model='gpt-4-1106-preview', temperature=0.8)
     llm_chain = LLMChain(prompt=prompt_template, llm=llm)
 
     # st.secretsを使ってプロジェクト名を取得
