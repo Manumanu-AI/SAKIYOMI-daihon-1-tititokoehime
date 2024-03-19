@@ -262,7 +262,6 @@ def generate_response_with_llm_for_multiple_namespaces(index, user_input, namesp
     ・生成する台本のフォーマットは【アウトプット例】と同じにして生成してください。
     ・また、【アウトプット例】は過去に私が作ったものなので、そちらを再現するように口調、文章量、表現を真似て下さい。
     ・主な流れは次のようになっているので遵守して。冒頭で「(こういう体験をしてきた)~から聞いて。」という導入、「僕らは最高の愛媛を体験したい親子」という自己紹介、紹介対象の説明と体験の深堀り、CTAに「そんなここは、(場所の名前)」と入れて終わり。CTA内でしか場所の名前は言わないこと。
-    ・「僕らは最高の愛媛を体験したい親子」という文言を必ず入れてください。
     ・自分が行って、おすすめしている表現で書くこと。その際、紹介するポイントはいくつかに絞ってください。
     ・あなたが書く台本と映像が合わさるので、「この~」「これ~」「あの〜」みたいな表現をいれてください。
     ・見ている人がその場所に行きたくなるような内容にして下さい。
@@ -288,7 +287,7 @@ def generate_response_with_llm_for_multiple_namespaces(index, user_input, namesp
     """)
 
     # LLMにプロンプトを渡して応答を生成
-    llm = ChatOpenAI(model='gpt-4-1106-preview', temperature=0.77)
+    llm = ChatOpenAI(model='gpt-4-1106-preview', temperature=0.8)
     llm_chain = LLMChain(prompt=prompt_template, llm=llm)
 
     # st.secretsを使ってプロジェクト名を取得
